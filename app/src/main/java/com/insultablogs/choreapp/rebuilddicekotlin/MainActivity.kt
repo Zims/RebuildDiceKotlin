@@ -4,6 +4,7 @@ import android.media.Image
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import com.insultablogs.choreapp.rebuilddicekotlin.R.drawable.*
 import junit.framework.Assert.assertTrue
@@ -26,42 +27,25 @@ class MainActivity : AppCompatActivity() {
         var diceImg: Array<Int> = arrayOf(R.drawable.dice1, R.drawable.dice2, R.drawable.dice3,
                 R.drawable.dice4, R.drawable.dice5, R.drawable.dice6)
 
+        howMutch.visibility = View.INVISIBLE
 
         rollButton.setOnClickListener {
-            Toast.makeText(this, "touched", Toast.LENGTH_LONG).show()
+            //Toast.makeText(this, "touched", Toast.LENGTH_LONG).show()
             var  r = Random()
             var  n=r.nextInt(6)
             image_leftDice.setImageDrawable(application.getDrawable(diceImg[n]))
             var  r2 = Random()
             var  n2=r2.nextInt(6)
             image_rightDice.setImageDrawable(application.getDrawable(diceImg[n2]))
+            topText.text = (n + n2 + 2).toString()
+            topText.visibility = View.INVISIBLE
+            howMutch.visibility = View.INVISIBLE
         }
 
-//            diceOne.setImageDrawable(application.getDrawable(diceImg[0]))
-//            diceTwo.setImageDrawable(application.getDrawable(diceImg[5]))}
-//
-//            fun Random.nextInt(range: IntRange): Int {
-//                return range.start + nextInt(range.last - range.start)
-//            }
-//            val random = Random()
-//            val generatedNum = (random.nextInt(0..5))
-//            println("generatedNum: " + generatedNum)
-//            topText.text = generatedNum.toString()
-//
-//        }
+        resultButton.setOnClickListener {
 
-
-
-
-
-
-//        rollButton.setOnClickListener {
-//
-//
-//        }
-
-
-
-    }
-
+            topText.visibility = View.VISIBLE
+            howMutch.visibility = View.VISIBLE
+            }
+        }
     }

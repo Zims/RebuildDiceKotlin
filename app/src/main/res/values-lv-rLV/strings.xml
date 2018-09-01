@@ -3,4 +3,5 @@
     <string name="app_name">Dicee</string>
     <string name="button_text">Mest kauliņus</string>
     <string name="roll_button_text">Mest kauliņus</string>
+    <string name="give_up">Padodos :(</string>
 </resources>

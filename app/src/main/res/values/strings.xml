@@ -3,4 +3,5 @@
     <string name="button_text">Roll</string>
     <string name="roll_button_text">Roll</string>
     <string name="description_button">Rolls the dice</string>
+    <string name="give_up">Padodos</string>
 </resources>
