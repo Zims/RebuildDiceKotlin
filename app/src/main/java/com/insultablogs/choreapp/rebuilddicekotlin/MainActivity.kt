@@ -29,6 +29,8 @@ class MainActivity : AppCompatActivity() {
 
         howMutch.visibility = View.INVISIBLE
 
+
+
         rollButton.setOnClickListener {
             //Toast.makeText(this, "touched", Toast.LENGTH_LONG).show()
             var  r = Random()
@@ -40,12 +42,47 @@ class MainActivity : AppCompatActivity() {
             topText.text = (n + n2 + 2).toString()
             topText.visibility = View.INVISIBLE
             howMutch.visibility = View.INVISIBLE
+
+
+
+
+
         }
+
 
         resultButton.setOnClickListener {
 
             topText.visibility = View.VISIBLE
             howMutch.visibility = View.VISIBLE
-            }
+
+
         }
+
+//            diceOne.setImageDrawable(application.getDrawable(diceImg[0]))
+//            diceTwo.setImageDrawable(application.getDrawable(diceImg[5]))}
+//
+//            fun Random.nextInt(range: IntRange): Int {
+//                return range.start + nextInt(range.last - range.start)
+//            }
+//            val random = Random()
+//            val generatedNum = (random.nextInt(0..5))
+//            println("generatedNum: " + generatedNum)
+//            topText.text = generatedNum.toString()
+//
+//        }
+
+
+
+
+
+
+//        rollButton.setOnClickListener {
+//
+//
+//        }
+
+
+
+    }
+
     }
